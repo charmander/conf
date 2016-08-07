@@ -1,0 +1,28 @@
+[core]
+	compression = 9
+	editor = vim
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	conflictstyle = diff3
+
+[push]
+	default = simple
+
+[user]
+	email = ~@charmander.me
+	name = Charmander
+
+[format]
+	pretty = fuller
+
+[log]
+	decorate = short
+
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+
+[alias]
+	fetch-pr = "!f() { git fetch $1 pull/$2/head:pull/$2; }; f"
