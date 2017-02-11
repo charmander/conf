@@ -23,6 +23,10 @@
 		color: #666 !important;
 	}
 
+	.header-search-input::placeholder {
+		color: black !important;
+	}
+
 	.mail-status {
 		border-color: transparent !important;
 	}
