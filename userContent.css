@@ -1,0 +1,29 @@
+@-moz-document domain(github.com) {
+	.header {
+		background-color: #fafafa !important;
+		border-bottom: none !important;
+	}
+
+	.header-logo-invertocat, .header-nav-link {
+		color: #333 !important;
+	}
+
+	.header-nav-link .dropdown-caret {
+		border-top-color: #333 !important;
+	}
+
+	.header-search-wrapper {
+		background-color: rgba(0, 0, 0, 0.08) !important;
+		color: #333 !important;
+	}
+
+	.header-search-scope {
+		background-color: rgba(0, 0, 0, 0.04) !important;
+		border-right: none !important;
+		color: #666 !important;
+	}
+
+	.mail-status {
+		border-color: transparent !important;
+	}
+}
