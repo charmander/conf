@@ -4,11 +4,11 @@
 		border-bottom: none !important;
 	}
 
-	.header-logo-invertocat, .header-nav-link {
+	.header-logo-invertocat, .header-navlink {
 		color: #333 !important;
 	}
 
-	.header-nav-link .dropdown-caret {
+	.header-navlink .dropdown-caret {
 		border-top-color: #333 !important;
 	}
 
