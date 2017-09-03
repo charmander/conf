@@ -1,14 +1,14 @@
 @-moz-document domain(github.com) {
-	.header {
+	.Header {
 		background-color: #fafafa !important;
 		border-bottom: none !important;
 	}
 
-	.header-logo-invertocat, .header-logo-wordmark, .header-navlink {
+	.header-logo-invertocat, .header-logo-wordmark, .HeaderNavlink, .notification-indicator {
 		color: #333 !important;
 	}
 
-	.header-navlink .dropdown-caret {
+	.HeaderNavlink .dropdown-caret {
 		border-top-color: #333 !important;
 	}
 
