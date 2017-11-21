@@ -30,4 +30,8 @@
 	.mail-status {
 		border-color: transparent !important;
 	}
+
+	.blob-code-inner {
+		font-family: Fira Mono !important;
+	}
 }
