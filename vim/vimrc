@@ -1,0 +1,149 @@
+" Unsensible defaults
+set nocompatible
+set encoding=utf8
+set backspace=indent,eol,start
+set ttimeoutlen=0
+set mouse=
+set nosmarttab
+
+" Plugins
+execute pathogen#infect()
+
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_section_warning = ''
+
+filetype plugin on
+
+" UI
+set laststatus=2
+set number
+set ruler
+set scrolloff=2
+set showcmd
+set noshowmode
+set ttyfast
+set display=lastline,uhex
+set breakindent
+set linebreak
+let &showbreak='↳ '
+set wildmenu
+set browsedir=buffer
+
+let g:netrw_liststyle = 3
+
+" Color scheme
+
+" Light
+"let g:solarized_termcolors = 256
+"let g:solarized_contrast = 'high'
+"colorscheme solarized
+"set background=light
+
+" Dark
+colorscheme onedark
+set background=dark
+
+syntax on
+
+highlight clear MatchParen
+highlight MatchParen cterm=bold ctermfg=124 guifg=#af0000
+
+" Search
+set nohlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Indentation
+set tabstop=4
+set shiftwidth=4
+set autoindent
+
+set list
+let &listchars = 'tab:  ,extends:→,precedes:←'
+
+highlight clear SpecialKey
+highlight WhitespaceError ctermbg=red guibg=red
+
+" Light
+"highlight PotentialWhitespaceError ctermbg=187 guibg=#eee8d5
+
+" Dark
+highlight PotentialWhitespaceError ctermbg=234 guibg=#3e4451
+
+function! s:MatchWhitespaceErrors()
+	for m in getmatches()
+		if m.group == 'WhitespaceError' || m.group == 'PotentialWhitespaceError'
+			call matchdelete(m.id)
+		endif
+	endfor
+
+	if &l:expandtab
+		call matchadd('WhitespaceError', '\t')
+	else
+		call matchadd('PotentialWhitespaceError', '\(^\|\t\)\@<=\( \*\)\@! \+')
+	endif
+
+	call matchadd('WhitespaceError', '[^\t]\@<=\t\+')
+	call matchadd('WhitespaceError', '\s\+$')
+endfunction
+
+function! s:Spaces(...)
+	setlocal expandtab
+	setlocal smarttab
+
+	if a:0 > 0
+		let &l:tabstop = a:1
+		let &l:shiftwidth = a:1
+	endif
+
+	call s:MatchWhitespaceErrors()
+endfunction
+
+function! s:Tabs()
+	set noexpandtab
+	set nosmarttab
+	set tabstop=4
+	set shiftwidth=4
+	call s:MatchWhitespaceErrors()
+endfunction
+
+augroup MatchWhitespaceErrors
+	autocmd!
+	autocmd WinNew * call s:MatchWhitespaceErrors()
+augroup END
+call s:MatchWhitespaceErrors()
+
+function! s:MatchWhitespaceErrorsHook(config)
+	call s:MatchWhitespaceErrors()
+endfunction
+
+call editorconfig#AddNewHook(function('s:MatchWhitespaceErrorsHook'))
+
+command -nargs=? Spaces call s:Spaces(<args>)
+command Tabs call s:Tabs()
+
+" Key bindings
+noremap ; :
+noremap , ;
+
+noremap "! "=substitute(system(input('$ ')), '^\n*\(.\{-}\)\n*$', '\1', '')<Return>
+
+noremap mk :m--<Return>
+noremap mj :m+<Return>
+
+" zz
+noremap ZZ <nop>
+
+" Persistent undo
+if !exists('sudoedit')
+	set undofile
+	set undodir=~/.tmp/vim-undo//
+endif
+
+" Miscellaneous
+set directory=~/.tmp//
+set backupcopy=yes
+set lazyredraw
+set t_ut=
