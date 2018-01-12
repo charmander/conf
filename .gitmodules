@@ -1,30 +1,30 @@
 [submodule "vim/bundle/editorconfig-vim"]
-	path = vim/pack/all/start/editorconfig-vim
+	path = vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
 [submodule "vim/bundle/onedark.vim"]
-	path = vim/pack/all/opt/onedark.vim
+	path = vim/bundle/onedark.vim
 	url = https://github.com/joshdick/onedark.vim
 [submodule "vim/bundle/vim-airline-themes"]
-	path = vim/pack/all/start/vim-airline-themes
+	path = vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "vim/bundle/vim-airline"]
-	path = vim/pack/all/start/vim-airline
+	path = vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "vim/bundle/vim-abolish"]
-	path = vim/pack/all/start/vim-abolish
+	path = vim/bundle/vim-abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "vim/bundle/vim-javascript"]
-	path = vim/pack/all/start/vim-javascript
+	path = vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
 [submodule "vim/bundle/vim-jinja"]
-	path = vim/pack/all/start/vim-jinja
+	path = vim/bundle/vim-jinja
 	url = https://github.com/mitsuhiko/vim-jinja
 [submodule "vim/bundle/vim-repeat"]
-	path = vim/pack/all/start/vim-repeat
+	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "vim/bundle/vim-surround"]
-	path = vim/pack/all/start/vim-surround
+	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "vim/bundle/vim-toml"]
-	path = vim/pack/all/start/vim-toml
+	path = vim/bundle/vim-toml
 	url = https://github.com/cespare/vim-toml
