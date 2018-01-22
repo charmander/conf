@@ -33,7 +33,7 @@ np() {
 
 docker-eslint() {
 	docker run \
-		--mount type=bind,readonly,\"source="$(pwd | sed 's/"/""/g')"\",destination=/var/build \
+		--mount "type=bind,readonly,\"source=${PWD//\"/\"\"}\",destination=/var/build" \
 		--network=none --security-opt=no-new-privileges \
 		--rm -it eslint "$@"
 }
