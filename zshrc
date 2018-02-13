@@ -22,7 +22,7 @@ PROMPT='%~: '
 
 # Functions and aliases
 alias ls='ls -A -p --color=auto'
-alias rg='rg --hidden -i'
+alias rg='rg --hidden --smart-case'
 
 np() {
 	local p
