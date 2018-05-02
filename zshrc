@@ -21,7 +21,7 @@ setopt incappendhistory
 PROMPT='%~: '
 
 # Functions and aliases
-alias ls='ls -A -p --color=auto'
+alias ls='ls-personalized -A -p --color=auto'
 alias rg='rg --hidden --smart-case'
 
 np() {
