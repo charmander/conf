@@ -32,7 +32,7 @@ np() {
 }
 
 docker-eslint() {
-	docker run \
+	docker image inspect eslint > /dev/null && docker run \
 		--mount "type=bind,readonly,\"source=${PWD//\"/\"\"}\",destination=/var/build" \
 		--network=none --security-opt=no-new-privileges \
 		--rm -it eslint "$@"
