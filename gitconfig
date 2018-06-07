@@ -17,12 +17,14 @@
 [user]
 	email = ~@charmander.me
 	name = Charmander
+	signingKey = 306D15DDD82EC39796CBF9C1219EFB3196A8710F
 
 [format]
 	pretty = fuller
 
 [log]
 	decorate = short
+	showSignature = true
 
 [url "https://github.com/"]
 	insteadOf = git://github.com/
