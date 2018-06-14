@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Google plain URL",
+	"version": "0.1.0",
+	"description": "Removes Google search result redirect when scripts are disabled so you can copy links",
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"https://www.google.com/url?*"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.google.com/search?*"],
+			"js": ["content.js"]
+		}
+	],
+	"applications": {
+		"gecko": {
+			"id": "google-plain-url@charmander.me"
+		}
+	}
+}
