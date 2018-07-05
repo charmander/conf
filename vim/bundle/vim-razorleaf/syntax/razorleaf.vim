@@ -1,6 +1,6 @@
 syntax include @javascript syntax/javascript.vim
 
-syntax keyword rlKeyword append block doctype else extends for if include macro of replace yield
+syntax keyword rlKeyword append block doctype elif else extends for if include macro of replace yield
 syntax region rlText start=/"/ skip=/\\./ end=/"/ contains=rlTextEscape,rlInterpolation
 syntax region rlComment start=/#/ end=/$/
 syntax region rlCode start=/%/ end=/$/ contains=@javascript
