@@ -42,6 +42,14 @@ docker-eslint() {
 		--rm -it eslint "$@"
 }
 
+npm() {
+	if [[ "$#" = 1 && pack = "$1" ]]; then
+		npm-pack-check
+	else
+		command npm "$@"
+	fi
+}
+
 # Miscellaneous
 unsetopt clobber
 setopt interactivecomments
