@@ -47,8 +47,8 @@ set background=dark
 
 syntax on
 
-highlight clear MatchParen
-highlight MatchParen cterm=bold ctermfg=124 guifg=#af0000
+"highlight clear MatchParen
+"highlight MatchParen cterm=bold ctermfg=124 guifg=#af0000
 
 " Search
 set nohlsearch
