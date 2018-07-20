@@ -43,6 +43,17 @@ docker-eslint() {
 }
 
 npm() {
+	local p="$PWD"
+
+	while [[ -n "$p" && "$p" != "$HOME" ]]; do
+		if [[ -e "$p/.npmrc" ]]; then
+			printf 'Refusing to run npm with possible local .npmrc at %s/.npmrc\n' "$p" >&2
+			return 1
+		fi
+
+		p="${p%/*}"
+	done
+
 	if [[ "$#" = 1 && pack = "$1" ]]; then
 		npm-pack-check
 	else
