@@ -80,9 +80,9 @@ def main(relative=True):
 				print(f"Linked ~/{to}", file=sys.stderr)
 
 	for from_, to in COPY:
-		with open(abs_root / from_, "r") as from_file:
+		with open(abs_root / from_, "r", encoding="utf-8") as from_file:
 			try:
-				with open(home / to, "x") as to_file:
+				with open(home / to, "x", encoding="utf-8") as to_file:
 					shutil.copyfileobj(from_file, to_file)
 			except FileExistsError:
 				print(f"~/{to} already exists", file=sys.stderr)
