@@ -11,6 +11,12 @@
 	"background": {
 		"scripts": ["background.js"]
 	},
+	"content_scripts": [
+		{
+			"matches": ["https://mobile.twitter.com/*"],
+			"js": ["content.js"]
+		}
+	],
 	"applications": {
 		"gecko": {
 			"id": "twitter-light-mobile@charmander.me"
