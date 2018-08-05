@@ -25,3 +25,7 @@ for (const button of document.querySelectorAll('input[name="commit"][value="Disp
 	button.setAttribute('form', form.id);
 	button.name = '';
 }
+
+for (const link of document.getElementsByClassName('has-expanded-path')) {
+	link.href = link.getAttribute('data-expanded-path');
+}
