@@ -7,8 +7,7 @@ for (const link of document.querySelectorAll('a[href^="/url?"]')) {
 	link.rel = 'noreferrer';
 }
 
-window.addEventListener('mousedown', e => {
-	if (e.target.onmousedown !== null) {
-		e.stopPropagation();
-	}
-}, true);
+for (const link of document.querySelectorAll('[onmousedown]')) {
+	link.onmousedown = null;
+	link.rel = 'noreferrer';
+}
