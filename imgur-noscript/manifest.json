@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Imgur NoScript",
+	"version": "0.1.0",
+	"description": "Allows Imgur to be displayed without scripts/localStorage permissions",
+	"permissions": [],
+	"content_scripts": [
+		{
+			"matches": ["https://imgur.com/*"],
+			"js": ["content.js"]
+		}
+	],
+	"applications": {
+		"gecko": {
+			"id": "imgur-noscript@charmander.me"
+		}
+	}
+}
