@@ -61,6 +61,17 @@ npm() {
 	fi
 }
 
+tar() {
+	if [[ "$1" = -* ]]; then
+		command tar --numeric-owner "$@"
+	elif [[ "$1" = *[cru]* ]]; then
+		echo 'Refusing to write tar data without --numeric-owner' >&2
+		return 1
+	else
+		command tar "$@"
+	fi
+}
+
 # Miscellaneous
 unsetopt clobber
 setopt interactivecomments
