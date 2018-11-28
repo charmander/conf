@@ -35,3 +35,9 @@
 		font-family: Fira Mono !important;
 	}
 }
+
+@-moz-document domain(www.postgresql.org) {
+	.navbar.fixed-top {
+		position: absolute !important;
+	}
+}
