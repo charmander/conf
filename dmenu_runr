@@ -1,7 +1,8 @@
 #!/bin/sh
-exec $(dmenu "$@" <<'END'
+p=$(dmenu "$@" <<'END'
 firefox
-gvim
+gvim -f
 ⋮
 END
-)
+) || exit $?
+exec $p
