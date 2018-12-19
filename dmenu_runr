@@ -1,0 +1,7 @@
+#!/bin/sh
+exec $(dmenu "$@" <<'END'
+firefox
+gvim
+⋮
+END
+)
