@@ -18,6 +18,7 @@ LINK = [
 
 	# Other
 	("gitconfig", ".gitconfig"),
+	("psqlrc", ".psqlrc"),
 	("rgignore", ".rgignore"),
 ]
 
