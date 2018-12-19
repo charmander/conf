@@ -29,6 +29,7 @@ VIM_LINK = [
 	"autoload",
 	"bundle",
 	"colors",
+	"ftdetect",
 	"gvimrc",
 	"syntax",
 	"vimrc",
