@@ -27,6 +27,7 @@ COPY = [
 ]
 
 VIM_LINK = [
+	"after",
 	"autoload",
 	"bundle",
 	"colors",

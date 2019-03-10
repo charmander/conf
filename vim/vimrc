@@ -33,6 +33,8 @@ set browsedir=buffer
 
 let g:netrw_liststyle = 3
 
+let g:rust_recommended_style = 0
+
 " Color scheme
 
 " Light
