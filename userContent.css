@@ -1,10 +1,10 @@
 @-moz-document domain(github.com) {
-	.Header {
+	.Header-old {
 		background-color: #fafbfc !important;
 		border-bottom: none !important;
 	}
 
-	.header-logo-invertocat, .header-logo-wordmark, .HeaderNavlink, .notification-indicator {
+	.header-logo-invertocat, .header-logo-wordmark, .HeaderNavlink, .notification-indicator, .Header-link {
 		color: #333 !important;
 	}
 
