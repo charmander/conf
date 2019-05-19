@@ -1,4 +1,5 @@
 @-moz-document domain(github.com) {
+	/* use light header colours */
 	.Header {
 		background-color: #fafbfc !important;
 		border-bottom: none !important;
@@ -33,6 +34,20 @@
 
 	.blob-code-inner {
 		font-family: Fira Mono !important;
+	}
+
+	/* hide status prompt on own profile */
+	.js-user-status-container {
+		padding: 0 !important;
+	}
+
+	.js-user-status-details {
+		display: none !important;
+	}
+
+	/* hide status prompt in header navigation */
+	.dropdown-menu .js-user-status-context, .dropdown-menu .js-user-status-context + .dropdown-divider {
+		display: none !important;
 	}
 }
 
