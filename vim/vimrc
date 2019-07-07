@@ -10,7 +10,7 @@ set nosmarttab
 execute pathogen#infect()
 
 let g:lightline = {
-	\ 'colorscheme': 'onedark',
+	\ 'colorscheme': 'onehalfdark',
 	\ 'enable': { 'tabline': 0 },
 	\ }
 
@@ -36,16 +36,8 @@ let g:netrw_liststyle = 3
 let g:rust_recommended_style = 0
 
 " Color scheme
-
-" Light
-"let g:solarized_termcolors = 256
-"let g:solarized_contrast = 'high'
-"colorscheme solarized
-"set background=light
-
-" Dark
-colorscheme onedark
-set background=dark
+colorscheme onehalflight
+set background=light
 
 syntax on
 
