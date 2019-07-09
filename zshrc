@@ -27,6 +27,7 @@ PROMPT='%~: '
 # Functions and aliases
 alias ls='ls-personalized -A -p --color=auto'
 alias rg='rg --hidden --smart-case'
+alias scp='echo don’t use scp'
 
 np() {
 	local p
