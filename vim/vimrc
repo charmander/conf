@@ -62,10 +62,10 @@ highlight clear SpecialKey
 highlight WhitespaceError ctermbg=red guibg=red
 
 " Light
-"highlight PotentialWhitespaceError ctermbg=187 guibg=#eee8d5
+highlight PotentialWhitespaceError ctermbg=187 guibg=#f3f3f3
 
 " Dark
-highlight PotentialWhitespaceError ctermbg=234 guibg=#3e4451
+"highlight PotentialWhitespaceError ctermbg=234 guibg=#3e4451
 
 function! s:MatchWhitespaceErrors()
 	for m in getmatches()
