@@ -1,20 +1,17 @@
 ! general
-URxvt.scrollBar: false
-URxvt.iso14755: false
-URxvt.iso14755_52: false
+XTerm.termName: xterm-256color
+XTerm.vt100.metaSendsEscape: true
 
 ! text
-URxvt.font: xft:Fira Mono:pixelsize=12:antialias=true:autohint=false,xft:Symbola:pixelsize=9:antialias=true:autohint=false
-URxvt.letterSpace: -2
+XTerm.vt100.faceName: xft:Fira Mono:size=9:antialias=true:autohint=false
 
 ! colours
-URxvt.background: #222630
-URxvt.foreground: #ffffff
-URxvt.color4: rgb:5c/9c/ff
-URxvt.color12: rgb:5c/9c/ff
+XTerm.vt100.background: rgb:22/26/30
+XTerm.vt100.foreground: rgb:ff/ff/ff
+XTerm.vt100.color4: rgb:5c/9c/ff
+XTerm.vt100.color12: rgb:5c/9c/ff
 
-! extensions
-URxvt.perl-ext-common: url-select
-URxvt.url-select.launcher: firefox
-URxvt.url-select.underline: true
-URxvt.keysym.M-u: perl:url-select:select_next
+! keys
+XTerm.vt100.Translations: #override\n\
+	Alt Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+	Alt Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
