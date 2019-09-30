@@ -73,6 +73,15 @@ tar() {
 	fi
 }
 
+rl-link() {
+	if [[ "$#" -ne 1 ]]; then
+		echo 'Usage: rl-link <template>' >&2
+		return 1
+	fi
+
+	echo ": $1 |> node_modules/.bin/razorleaf %f > %o |> ${1%%.rl}.html" >>! Tupfile
+}
+
 # Miscellaneous
 unsetopt clobber
 setopt interactivecomments
