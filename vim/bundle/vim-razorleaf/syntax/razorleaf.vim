@@ -1,7 +1,7 @@
 syntax include @javascript syntax/javascript.vim
 
 syntax keyword rlKeyword append block doctype elif else extends for if include macro of replace yield
-syntax region rlText start=/"/ skip=/\\./ end=/"/ contains=rlTextEscape,rlInterpolationOuter
+syntax region rlText start=/"/ skip=/\\./ end=/"/ contains=rlTextEscape,rlInterpolationOuter,@Spell
 syntax region rlComment start=/#/ end=/$/
 syntax region rlCode start=/%/ end=/$/ contains=@javascript
 syntax match rlCode /^\(\s*\)do\( .*\|$\)\(\n\(\1\s.*\|$\)\)*/ contains=@javascript
