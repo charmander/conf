@@ -12,11 +12,20 @@ LINK = [
 	("zshrc", ".zshrc"),
 
 	# Windows
-	("spectrwm.conf", ".spectrwm.conf"),
-	("xinitrc", ".xinitrc"),
-	("Xresources", ".Xresources"),
+	("sway/config", ".config/sway/config"),
+
+	# Vim
+	("vim/after", ".vim/after"),
+	("vim/autoload", ".vim/autoload"),
+	("vim/bundle", ".vim/bundle"),
+	("vim/colors", ".vim/colors"),
+	("vim/ftdetect", ".vim/ftdetect"),
+	("vim/gvimrc", ".vim/gvimrc"),
+	("vim/syntax", ".vim/syntax"),
+	("vim/vimrc", ".vim/vimrc"),
 
 	# Other
+	("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml"),
 	("gitconfig", ".gitconfig"),
 	("psqlrc", ".psqlrc"),
 	("rgignore", ".rgignore"),
@@ -24,17 +33,6 @@ LINK = [
 
 COPY = [
 	("npmrc", ".npmrc"),
-]
-
-VIM_LINK = [
-	"after",
-	"autoload",
-	"bundle",
-	"colors",
-	"ftdetect",
-	"gvimrc",
-	"syntax",
-	"vimrc",
 ]
 
 
@@ -60,27 +58,26 @@ def is_linked(to, at):
 		return False
 
 
-def main(relative=True):
+def ensure_relative_link(to, at):
+	return ensure_link(Path(os.path.relpath(to, start=at.parent)), at)
+
+
+def main():
 	abs_root = Path(os.path.realpath(__file__)).parent
 	root = abs_root
-	vim_src = root / "vim"
 	home = Path.home()
-
-	if relative:
-		root = root.relative_to(home)
-		vim_src = ".." / root / "vim"
 
 	success = True
 
-	for from_, to in LINK:
+	for to, at in LINK:
 		try:
-			created = ensure_link(root / from_, home / to)
+			created = ensure_relative_link(root / to, home / at)
 		except FileExistsError:
-			print(f"~/{to} already exists", file=sys.stderr)
+			print(f"~/{at} already exists", file=sys.stderr)
 			success = False
 		else:
 			if created:
-				print(f"Linked ~/{to}", file=sys.stderr)
+				print(f"Linked ~/{at}", file=sys.stderr)
 
 	for from_, to in COPY:
 		with open(abs_root / from_, "r", encoding="utf-8") as from_file:
@@ -92,19 +89,6 @@ def main(relative=True):
 				success = False
 			else:
 				print(f"Wrote ~/{to}", file=sys.stderr)
-
-	vim_dest = home / ".vim"
-
-	try:
-		os.mkdir(vim_dest)
-	except FileExistsError:
-		if not all(is_linked(vim_src / name, vim_dest / name) for name in VIM_LINK):
-			print("~/.vim already exists", file=sys.stderr)
-			success = False
-	else:
-		for name in VIM_LINK:
-			os.symlink(vim_src / name, vim_dest / name)
-			print(f"Linked ~/.vim/{name}", file=sys.stderr)
 
 	try:
 		os.makedirs(home / ".tmp/vim-undo")
