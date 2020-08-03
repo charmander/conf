@@ -33,7 +33,7 @@ np() {
 	local p
 	p=$(nosepass "$@") || return 1
 	echo 'Password copied!'
-	printf '%s' "$p" | wl-copy -f
+	printf '%s' "$p" | ws-copy -b
 }
 
 docker-eslint() {
