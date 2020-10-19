@@ -1,0 +1,10 @@
+{
+	"policies": {
+		"CaptivePortal": false,
+		"DisableFeedbackCommands": true,
+		"DisableFirefoxStudies": true,
+		"DisablePocket": true,
+		"DisableTelemetry": true,
+		"SearchSuggestEnabled": false
+	}
+}
