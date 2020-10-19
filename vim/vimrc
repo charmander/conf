@@ -1,5 +1,6 @@
 " Unsensible defaults
 set nocompatible
+set nomodeline
 set encoding=utf8
 set backspace=indent,eol,start
 set ttimeoutlen=0
