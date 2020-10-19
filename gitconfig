@@ -31,3 +31,5 @@
 
 [alias]
 	fetch-pr = "!f() { git fetch $1 pull/$2/head:pull/$2; }; f"
+[pull]
+	ff = only
