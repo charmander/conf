@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>Google no-client</ShortName>
+	<Description>Search Google</Description>
+	<InputEncoding>UTF-8</InputEncoding>
+	<LongName>Google Search (no client)</LongName>
+	<Image height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUAAAD+/v79/f39/f39/f39/f39/f3////////9/f3+/v79/f39/f39/f39/f39/f39/f39/f3+/v79/f39/f3////////++fn2rKXuaV3rSjzqRzruZlr1qaL96ujuY1jqQzXwdmztYlbrSTv0nJX60s/61NH0nZbtXlL84+H7z5LsUjfqRjj61ND//f38yTX5sgr2pGv7vgv7vAX+7LZChfR7qvf7vQr+67V1pvfxxCztvBGw0Y2CrviNtfjN1olIqks4qlbO6tXY5v1Gh/TD2Pz5/PpXt3E0qFM6qliR0KLM6dTO6tab1KpKo5lBhvBnnfb+/v/p9exYt3FYr47o8P75/fqn2bRdunY6q1hZuHKd1az2+/iLqKv8AAAAFnRSTlMAMpnb+tqYMAqdCcPBltj515Qulb8IZS4q4gAAAAFiS0dEBxZhiOsAAAAHdElNRQfgDAcJADnSY9cdAAAAzklEQVQY0z2P6VaCUBSFj4AQqOC4scksNc3ULKXS0kZNnIfMzN7/ObwXwe/HWWfvdUYihk8QJckvK7TjQIWLoDk6ADN5eHR8cmoiyB0VqbO0wzkgs36YF+lMNneZL1yxLoUEFK9LZT6hwkOIRNxUb7FHJwl3tTrLLM49DGY81B49o8EMP5pPz7vyltVGmGS8vL69c/3xaXUQIQXdr57dHwxH48l0hiixvfNFz+F7iRi7VAviZ/W7tv82/4gn+DOa4B0RS7j/KiHdMMKRKM+3iM0dkCi5l1MAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMTNUMTk6MDY6MjgtMDc6MDDdSAQKAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTEyLTA3VDE3OjAwOjU3LTA4OjAw6ylkBwAAAABJRU5ErkJggg</Image>
+	<Url type="text/html" template="https://www.google.com/search">
+		<Param name="q" value="{searchTerms}" />
+	</Url>
+</OpenSearchDescription>
