@@ -5,6 +5,7 @@
 		"DisableFirefoxStudies": true,
 		"DisablePocket": true,
 		"DisableTelemetry": true,
+		"NetworkPrediction": false,
 		"SearchSuggestEnabled": false,
 		"Preferences": {
 			"network.IDN_show_punycode": {
