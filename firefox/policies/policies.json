@@ -5,6 +5,12 @@
 		"DisableFirefoxStudies": true,
 		"DisablePocket": true,
 		"DisableTelemetry": true,
-		"SearchSuggestEnabled": false
+		"SearchSuggestEnabled": false,
+		"Preferences": {
+			"network.IDN_show_punycode": {
+				"Value": true,
+				"Status": "user"
+			}
+		}
 	}
 }
