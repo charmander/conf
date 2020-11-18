@@ -10,6 +10,22 @@
 			"network.IDN_show_punycode": {
 				"Value": true,
 				"Status": "user"
+			},
+			"network.http.sendRefererHeader": {
+				"Value": 0,
+				"Status": "user"
+			},
+			"network.http.referer.trimmingPolicy": {
+				"Value": 2,
+				"Status": "user"
+			},
+			"network.http.referer.XOriginPolicy": {
+				"Value": 2,
+				"Status": "user"
+			},
+			"network.http.referer.XOriginTrimmingPolicy": {
+				"Value": 2,
+				"Status": "user"
 			}
 		}
 	}
