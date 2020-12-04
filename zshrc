@@ -36,11 +36,28 @@ np() {
 	printf '%s' "$p" | ws-copy -b
 }
 
-docker-eslint() {
-	docker image inspect eslint > /dev/null && docker run \
-		--mount "type=bind,readonly,\"source=${PWD//\"/\"\"}\",destination=/var/build" \
-		--network=none --security-opt=no-new-privileges \
-		--rm -it eslint "$@"
+bwrap-eslint() {
+	local dir
+	dir="${PWD##*/}"
+
+	env -i bwrap \
+		--unshare-all \
+		--unshare-user \
+		--unshare-cgroup \
+		--new-session \
+		--die-with-parent \
+		--hostname sandbox \
+		--ro-bind /bin /bin \
+		--ro-bind /lib /lib \
+		--ro-bind /lib64 /lib64 \
+		--ro-bind /usr/bin /usr/bin \
+		--ro-bind /usr/lib /usr/lib \
+		--ro-bind . /mnt/"$dir" \
+		--remount-ro / \
+		--chdir /mnt/"$dir" \
+		--setenv HOME /home/sandbox \
+		--setenv TERM xterm-256color \
+		node_modules/.bin/eslint "$@"
 }
 
 npm() {
