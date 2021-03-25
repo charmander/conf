@@ -5,6 +5,11 @@
 		"DisableFirefoxStudies": true,
 		"DisablePocket": true,
 		"DisableTelemetry": true,
+		"EnableTrackingProtection": {
+			"Value": true,
+			"Cryptomining": true,
+			"Fingerprinting": true
+		},
 		"NetworkPrediction": false,
 		"SearchSuggestEnabled": false,
 		"Preferences": {
