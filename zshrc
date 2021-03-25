@@ -3,7 +3,8 @@ zle -N edit-command-line
 
 # Key bindings
 bindkey -e
-bindkey ^F history-incremental-search-forward
+bindkey ^F history-incremental-pattern-search-forward
+bindkey ^R history-incremental-pattern-search-backward
 bindkey -r ^S
 bindkey ^X^E edit-command-line
 
