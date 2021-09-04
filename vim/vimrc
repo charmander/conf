@@ -126,7 +126,9 @@ noremap , ;
 
 noremap "! "=substitute(system(input('$ ')), '^\n*\(.\{-}\)\n*$', '\1', '')<Return>
 
+" move line or selection up
 noremap mk :m--<Return>
+" move line or selection down
 noremap mj :m+<Return>
 
 " zz
