@@ -1,6 +1,9 @@
 {
 	"policies": {
 		"CaptivePortal": false,
+		"Cookies": {
+			"Behavior": "reject-foreign"
+		},
 		"DisableFeedbackCommands": true,
 		"DisableFirefoxStudies": true,
 		"DisablePocket": true,
@@ -14,7 +17,19 @@
 			"Cryptomining": true,
 			"Fingerprinting": true
 		},
+		"ExtensionSettings": {
+			"uBlock0@raymondhill.net": {
+				"installation_mode": "normal_installed",
+				"install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
+			}
+		},
+		"FirefoxHome": {
+			"SponsoredTopSites": false,
+			"Pocket": false,
+			"SponsoredPocket": false
+		},
 		"NetworkPrediction": false,
+		"NoDefaultBookmarks": true,
 		"SearchSuggestEnabled": false,
 		"Preferences": {
 			"network.IDN_show_punycode": {
