@@ -23,6 +23,14 @@ LINK = [
 	("vim/gvimrc", ".vim/gvimrc"),
 	("vim/syntax", ".vim/syntax"),
 	("vim/vimrc", ".vim/vimrc"),
+	("vim/after", ".config/nvim/after"),
+	("vim/autoload", ".config/nvim/autoload"),
+	("vim/bundle", ".config/nvim/bundle"),
+	("vim/colors", ".config/nvim/colors"),
+	("vim/ftdetect", ".config/nvim/ftdetect"),
+	("vim/syntax", ".config/nvim/syntax"),
+	("vim/vimrc", ".config/nvim/init.vim"),
+	("vim/ginit.vim", ".config/nvim/ginit.vim"),
 
 	# Other
 	("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml"),

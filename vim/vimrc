@@ -4,7 +4,6 @@ set nomodeline
 set encoding=utf8
 set backspace=indent,eol,start
 set ttimeoutlen=0
-set mouse=
 set nosmarttab
 
 " Plugins
@@ -16,6 +15,7 @@ let g:lightline = {
 	\ }
 
 filetype plugin on
+filetype indent off
 
 " UI
 set laststatus=2
