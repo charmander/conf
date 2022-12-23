@@ -29,6 +29,7 @@ PROMPT='%~: '
 alias ls='ls -A -p --color=auto'
 alias rg='rg --hidden --smart-case'
 alias scp='echo don’t use scp'
+alias dup='(alacritty msg create-window --working-directory "$PWD" || alacritty &)'
 
 np() {
 	local p
