@@ -16,11 +16,6 @@
 [push]
 	default = simple
 
-[user]
-	email = ~@charmander.me
-	name = Charmander
-	signingKey = 306D15DDD82EC39796CBF9C1219EFB3196A8710F
-
 [format]
 	pretty = fuller
 
